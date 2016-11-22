@@ -2,9 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel = 'stylesheet' href = 'masterMind.css'/>
     <title>Master Mind Game</title>
   </head>
   <body>
+    <h1 id = 'header'> MASTER MIND!!!</h1>
 
+    <h4> SELECT GAME DIFFICULTY <h4>
+    <select id="spaces">
+      <option value= 3 >3 Spaces</option>
+      <option value= 4 selected>4 Spaces</option>
+      <option value= 5 >5 Spaces</option>
+    </select>
+    <button type = 'button' id = "startGame"> START GAME!</button>
+
+    <table id = 'gameBoard'>
+      <h2>REVEAL THE COMPUTERS SECRET CODE<h2>
+      <div id = "masterCode">THE ANSWER IS HERE</div>
+
+    </table>
+
+  <script type = "text/javascript" src = "masterMind.js"></script>
   </body>
 </html>
