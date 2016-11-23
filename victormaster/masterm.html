@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Master Mind Game</title>
+		<link rel="stylesheet" type="text/css" href="masterm.css">
 	</head>
 	<body>
 		<h1>Master Mind Game</h1>
@@ -27,15 +28,34 @@
 - You win the game when you manage to guess all the colors in the code sequence and when they all in the right position.
 
 - You lose the game if you use all attempts without guessing the computer code sequence.
-
+<h6>Choose Diff </h6>
 	</p>
 	<select id="colorSelect">
 
 		<option value= "3" >3 Spaces</option>
-		<option value= "4" selected>4 Spaces</option>
+		<option value= "4" >4 Spaces</option>
 		<option value= "5" >5 Spaces</option>
 	</select>
 </p>
+<!-- table -->
+<div style="overflow-x:auto;">
+  <table> </table>
+</div>
+<hr>
+ <div >
+	 <select id="select1" onchange="colourFunction()">
+ <option class="yellow" value="A"> yellow</option>
+ <option class="green" value="B"> green </option>
+ <option class="blue" value="C"> blue</option>
+ <option class="red" value="D"> red </option>
+ <option class="purple" value="C"> purple</option>
+ <option class="orange" value="D"> orange </option>
+
+
+ </select>
+ </div>
+
+
 
 		<script type="text/javascript" src="masterm.js"></script>
 	</body>

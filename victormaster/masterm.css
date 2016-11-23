@@ -1,0 +1,10 @@
+#select1 {width:150px; color:rgba(0, 0, 0, 0);}
+#select1:focus, #select1:focus {
+color:black;
+}
+.yellow {background:yellow;}
+.green {background:green}
+.blue {background:blue}
+.red {background:red;}
+.purple {background:purple;}
+.orange {background:orange;}
