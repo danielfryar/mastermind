@@ -1,20 +1,19 @@
-var spaces = document.getElementById('spaces').value;
-var gameBoard = document.getElementById("gameBoard");
-var nextRow = gameBoard.insertRow();
-var nextCell = nextRow.insertCell();
-var computerChoice1, computerChoice2, computerChoice3, computerChoice4, computerChoice5, computerChoice6;
-var userGuess1, userGuess2, userGuess3, userGuess4, userGuess5, userGuess6;
-// var answers = [computerChoice1, computerChoice2, computerChoice3, computerChoice4, computerChoice5, computerChoice6];
-// var guesses = [userGuess1, userGuess2, userGuess3, userGuess4, userGuess5, userGuess6];
+var spaces;
+var gameBoard; /*= document.getElementById("gameBoard");*/
+var nextRow;/* = gameBoard.insertRow();*/
+var nextCell;/* = nextRow.insertCell();*/
+var answers;
+var guesses;
 
 function compareCodeVsBreaker(guesses, answers){
   var answerKey = '';
 
   for (var i = 0; i <= guesses.length; i++){
-    for (var j = 0; i <= answers.lenght; j++)
-    if (guesses[i] == ansers[j]){
-      if (i === j) answerKey += 'black';
-      else answerKey += 'white'
+    for (var j = 0; j <= answers.lenght; j++){
+      if (guesses[i] == answers[j]){
+        if (i === j) answerKey += 'black';
+        else answerKey += 'white';
+      }
     }
   }
 }
@@ -24,12 +23,8 @@ function getRandomForComputer(){
 }
 
 function startGame(){
-    computerChoice1 = getRandomForComputer();
-    computerChoice2 = getRandomForComputer();
-    computerChoice3 = getRandomForComputer();
-    computerChoice4 = getRandomForComputer();
-    computerChoice5 = getRandomForComputer();
-    computerChoice6 = getRandomForComputer();
+    spaces = document.getElementById('spaces').value;
+
 }
 
 document.getElementById('startGame').addEventListener('click', function(){
