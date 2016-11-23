@@ -1,0 +1,12 @@
+p {
+  display:inline;
+}
+button {
+  display:inline;
+  color:blue;
+}
+body {
+  padding:10px;
+  margin:100px;
+  border:solid 1px black;
+}
