@@ -1,10 +1,11 @@
 var colors = ["yellow", 'green','blue','red','purple','orange'];
-var numSpaces;
+var difficulty;
 var gameBoard; /*= document.getElementById("gameBoard");*/
 var nextRow;/* = gameBoard.insertRow();*/
 var nextCell;/* = nextRow.insertCell();*/
 var answers;
 var guesses;
+var randomCompColor;
 
 for (var q = 0; q < colors.length; q++){
   console.log(colors[q]);
@@ -24,6 +25,10 @@ function compareCodeVsBreaker(guesses, answers){
   }
 }
 
+function selectedDifficulty(){
+
+}
+
 function getRandomNumber(){
   return Math.floor(Math.random() * 10);
 }
@@ -35,13 +40,17 @@ function colorSelector(){
 }
 
 function startGame(){
-    numSpaces = document.getElementById('spaces').value;
+    difficulty = Number.parseInt(document.getElementById('difficulty').value);
+    // for (var i = 0; i < difficulty; i++){
+    //   answers.push
+    // }
 
 }
 
 document.getElementById('startGame').addEventListener('click', function(){
   startGame();
   colorSelector();
-  console.log(colors[answers]);
+  randomCompColor = colors[answers];
+  console.log(difficulty);
   // document.getElementById('startGame').disabled = true;
 });

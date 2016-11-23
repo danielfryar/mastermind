@@ -2,11 +2,35 @@
   margin-left: 4px;
 }
 
-#spaces{
+#difficulty{
   margin: 3px;
   margin-left: 10px;
 }
 
 h4 {
   margin: 2px;
+}
+
+.y{
+  background-color: yellow;
+}
+
+.g{
+  background-color: green;
+}
+
+.b{
+  background-color: blue;
+}
+
+.r{
+  background-color: red;
+}
+
+.p{
+  background-color: purple;
+}
+
+.o{
+  background-color: orange;
 }
