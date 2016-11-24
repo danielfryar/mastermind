@@ -1,16 +1,16 @@
+$(document).ready(function(){
 var colors = ["yellow", 'green','blue','red','purple','orange'];
 var difficulty;
 var gameBoard; /*= document.getElementById("gameBoard");*/
 var nextRow;/* = gameBoard.insertRow();*/
 var nextCell;/* = nextRow.insertCell();*/
 var answers = [];
-var guesses;
+var guesses = [];
 var answerKey;
 var compChoice;
 
 
 for (var q = 0; q < colors.length; q++){
-  console.log(colors[q]);
 }
 
 
@@ -24,6 +24,8 @@ function codeBreaker(guesses, answers){
       }
     }
   }
+  return answerKey;
+  console.log(answerKey);
 }
 
 
@@ -46,11 +48,16 @@ function startGame(){
   document.getElementById('guessButton').disabled = false;
 }
 
+$('#guessButton').click(function(){
+  var guess = document.getElementsByClassName('userSelect').value;
+  console.log(guess);
+  // guesses.push(guess);
+});
 
-document.getElementById('startGame').addEventListener('click', function(){
+$("#startGame").click(function(){
   startGame();
   colorSelector();
   document.getElementById('startGame').disabled = true;
   console.log(answers);
-  console.log(answerKey);
+  });
 });
