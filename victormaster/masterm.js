@@ -1,17 +1,23 @@
 
-var playerCode; //holds player's code
 
 var randomColors = ["yellow", "green", "blue", "red", "purple", "orange"];
+var playerCode; //holds player's code
 var computerGuess; //holds computer's guesses
 var spaces;
 
-// function rdmClrSelec() {
-//     for (var i = 0; i < randomColors.length; i++) {
-//         // computerGues
-// 				return Math.random(rdmClrSelec());
-//     }
-// 		console.log(rdmClrSelec());
-// 	}
+//
+// for (var v = 0; v < randomColors.length; v++){
+//   console.log(randomColors[v]);
+// }
+
+
+function randomColors() {
+    for (var i = 0; i < randomColors.length; i++) {
+        // computerGues
+				return Math.random(randomColors());
+    }
+		console.log(randomColors());
+	}
 
     function startGame() {
 
@@ -23,8 +29,8 @@ var spaces;
         }
     }
 var computerGuess = function(){
-var comRanSele = randomColors[Math.floor(Math.random() * 6)];
-return comRanSele;
+var compRanSele = randomColors[Math.floor(Math.random() * 6)];
+return compRanSele;
 	console.log(computerGuess());
 }
 computerGuess()
