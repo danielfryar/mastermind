@@ -3,54 +3,54 @@ var difficulty;
 var gameBoard; /*= document.getElementById("gameBoard");*/
 var nextRow;/* = gameBoard.insertRow();*/
 var nextCell;/* = nextRow.insertCell();*/
-var answers;
+var answers = [];
 var guesses;
-var randomCompColor;
+var answerKey;
+var compChoice;
+
 
 for (var q = 0; q < colors.length; q++){
   console.log(colors[q]);
 }
 
 
-function compareCodeVsBreaker(guesses, answers){
-  var answerKey = '';
-
+function codeBreaker(guesses, answers){
+  answerKey = [];
   for (var i = 0; i < guesses.length; i++){
-    for (var j = 0; j < answers.lenght; j++){
+    for (var j = 0; j < answers.length; j++){
       if (guesses[i] == answers[j]){
-        if (i === j) answerKey += 'black';
-        else answerKey += 'white';
+        if (i === j) answerKey.push('black');
+        else answerKey.push('white');
       }
     }
   }
 }
 
-function selectedDifficulty(){
-
-}
 
 function getRandomNumber(){
   return Math.floor(Math.random() * 10);
 }
 
 function colorSelector(){
-  do{
-    answers = getRandomNumber();
-  }while (answers == undefined || answers > 5);
+  for (var i = 0; i < difficulty; i++){
+    do{
+      var answer = getRandomNumber();
+    }while (answer == undefined || answer > 5);
+  compChoice = colors[answer];
+  answers.push(compChoice);
+  }
 }
 
 function startGame(){
-    difficulty = Number.parseInt(document.getElementById('difficulty').value);
-    // for (var i = 0; i < difficulty; i++){
-    //   answers.push
-    // }
-
+  difficulty = Number.parseInt(document.getElementById('difficulty').value);
+  document.getElementById('guessButton').disabled = false;
 }
+
 
 document.getElementById('startGame').addEventListener('click', function(){
   startGame();
   colorSelector();
-  randomCompColor = colors[answers];
-  console.log(difficulty);
-  // document.getElementById('startGame').disabled = true;
+  document.getElementById('startGame').disabled = true;
+  console.log(answers);
+  console.log(answerKey);
 });
