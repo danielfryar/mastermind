@@ -4,7 +4,7 @@ var guesses, answers;
 
 $(document).ready(function() {
 $('.start').on('click',function(){
-  $("#Select Color").slideToggle(1000);
+  $(".Select Color").hide(1000);
 });
 function compareGuess() {
 for (var i = 0; i < guesses.length; i++) {
