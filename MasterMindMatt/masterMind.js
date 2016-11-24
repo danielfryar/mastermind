@@ -15,16 +15,16 @@ for (var q = 0; q < colors.length; q++){
 
 
 function codeBreaker(guesses, answers){
-  answerKey = [];
+  answerCode = [];
   for (var i = 0; i < guesses.length; i++){
     for (var j = 0; j < answers.length; j++){
       if (guesses[i] == answers[j]){
-        if (i === j) answerKey.push('black');
-        else answerKey.push('white');
+        if (i === j) answerCode +=('black');
+        else answerCode +='white';
       }
     }
   }
-  return answerKey;
+  answerKey = answerCode;
   console.log(answerKey);
 }
 
@@ -48,10 +48,13 @@ function startGame(){
   document.getElementById('guessButton').disabled = false;
 }
 
-$('#guessButton').click(function(){
-  var guess = document.getElementsByClassName('userSelect').value;
-  console.log(guess);
-  // guesses.push(guess);
+$('#guessButton').click(function(e){
+  e.preventDefault;
+  var guess = document.getElementById('selectUser1').value;
+  guesses.push(guess);
+  codeBreaker(guesses, answers);
+  console.log(guesses);
+
 });
 
 $("#startGame").click(function(){

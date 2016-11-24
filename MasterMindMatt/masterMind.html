@@ -14,17 +14,15 @@
     <select id="difficulty">
       <option value = 3 >3 Spaces</option>
       <option value = 4 >4 Spaces</option>
-      <option value = 5 selected>5 Spaces</option>
+      <option value = 1 selected>5 Spaces</option>
     </select>
     <button type = 'button' id = "startGame"> START GAME!</button>
 
-    <table id = 'guessBoard'>
+    <table id = 'gameBoard'>
       <h2>REVEAL THE COMPUTERS SECRET CODE<h2>
       <div id = "masterCode">THE ANSWER IS HERE</div>
     </table>
-    <form id = 'guessBoard'>
-      <select class = 'userSelect'>
-        <option class = 'start' val = 0>DeCoder</option>
+      <select class = 'userSelect' id = 'selectUser1'>
         <option class = 'yellow' value = "yellow">YELLOW</option>
         <option class = 'green' value = "green">GREEN</option>
         <option class = 'blue' value = 'blue'>BLUE</option>
@@ -32,8 +30,7 @@
         <option class = 'purple' value = 'purple'>PURPLE</option>
         <option class = 'orange' value = 'orange'>ORANGE</option>
       </select>
-      <select class = 'userSelect'>
-        <option class = 'start' val = 0>DeCoder</option>
+      <select class = 'userSelect'id = 'selectUser2'>
         <option class = 'yellow' value = "yellow">YELLOW</option>
         <option class = 'green' value = "green">GREEN</option>
         <option class = 'blue' value = 'blue'>BLUE</option>
@@ -41,8 +38,7 @@
         <option class = 'purple' value = 'purple'>PURPLE</option>
         <option class = 'orange' value = 'orange'>ORANGE</option>
       </select>
-      <select class = 'userSelect'>
-        <option class = 'start' val = 0>DeCoder</option>
+      <select class = 'userSelect'id = 'selectUser3'>
         <option class = 'yellow' value = "yellow">YELLOW</option>
         <option class = 'green' value = "green">GREEN</option>
         <option class = 'blue' value = 'blue'>BLUE</option>
@@ -50,8 +46,7 @@
         <option class = 'purple' value = 'purple'>PURPLE</option>
         <option class = 'orange' value = 'orange'>ORANGE</option>
       </select>
-      <select class = 'userSelect'>
-        <option class = 'start' val = 0>DeCoder</option>
+      <select class = 'userSelect'id = 'selectUser4'>
         <option class = 'yellow' value = "yellow">YELLOW</option>
         <option class = 'green' value = "green">GREEN</option>
         <option class = 'blue' value = 'blue'>BLUE</option>
@@ -59,8 +54,7 @@
         <option class = 'purple' value = 'purple'>PURPLE</option>
         <option class = 'orange' value = 'orange'>ORANGE</option>
       </select>
-      <select class = 'userSelect'>
-        <option class = 'start' val = 0>DeCoder</option>
+      <select class = 'userSelect'id = 'selectUser5'>
         <option class = 'yellow' value = "yellow">YELLOW</option>
         <option class = 'green' value = "green">GREEN</option>
         <option class = 'blue' value = 'blue'>BLUE</option>
@@ -68,7 +62,6 @@
         <option class = 'purple' value = 'purple'>PURPLE</option>
         <option class = 'orange' value = 'orange'>ORANGE</option>
       </select>
-    </form>  
       <button type="button" id = 'guessButton' disabled> TEST YOUR LUCK </button>
     <script type = "text/javascript" src = "masterMind.js"></script>
   </body>
