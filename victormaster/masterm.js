@@ -11,12 +11,12 @@ var spaces;
 // }
 
 
-function randomColors() {
+function selectRandomColors() {
     for (var i = 0; i < randomColors.length; i++) {
         // computerGues
-				return Math.random(randomColors());
+				return Math.random(selectRandomColors());
     }
-		console.log(randomColors());
+		console.log(selectRandomColors());
 	}
 
     function startGame() {
