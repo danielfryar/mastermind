@@ -7,7 +7,7 @@
 	</head>
 	<body onload="startGame()">
 		<h1>Master Mind Game</h1>
-		<button onclick="rdmClrSelec()" type="button" name="button">-       Play          -</button>
+		<button onclick="selectRandomColors()" type="button" name="button">-       Play          -</button>
 <p>
 	<p>
 		<strong>Mastermind - Rules of the game.</strong>
@@ -42,6 +42,9 @@
   <table> </table>
 </div>
 <hr>
+<form class="" id= "slect10" action="index.html" method="post">
+
+
  <div >
 	 <select id="select1" >
  <option class="yellow" value="1"> yellow</option>
@@ -67,9 +70,9 @@
  <option class="purple" value="5"> purple</option>
  <option class="orange" value="6"> orange </option>
    </select>
-
+<button type="button" id ="com" onclick="startGame()" name="button">CHECK </button>
  </div>
-
+</form>
 
 
 		<script type="text/javascript" src="masterm.js"></script>

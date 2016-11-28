@@ -11,6 +11,14 @@ var spaces;
 // }
 
 
+var computerGuess = function(){
+var compRanSele = randomColors[Math.floor(Math.random() * 3)];
+return compRanSele;
+	console.log(computerGuess());
+}
+computerGuess()
+
+
 function selectRandomColors() {
     for (var i = 0; i < randomColors.length; i++) {
         // computerGues
@@ -21,16 +29,10 @@ function selectRandomColors() {
 
     function startGame() {
 
-        spaces = document.getElementById('select1').value.parseInt;
+        spaces = document.getElementById('slect10').value.parseInt;
         for (var i = 0; i < spaces; i++) {
             console.log(spaces);
             answer.push(randomColors);
             putSelector(i);
         }
     }
-var computerGuess = function(){
-var compRanSele = randomColors[Math.floor(Math.random() * 6)];
-return compRanSele;
-	console.log(computerGuess());
-}
-computerGuess()
