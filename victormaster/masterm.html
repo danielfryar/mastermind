@@ -7,8 +7,8 @@
 	</head>
 	<body onload="startGame()">
 		<h1>Master Mind Game</h1>
-		<button onclick="selectRandomColors()" type="button" name="button">-       Play          -</button>
-<p>
+
+
 	<p>
 		<strong>Mastermind - Rules of the game.</strong>
 
@@ -28,25 +28,31 @@
 - You win the game when you manage to guess all the colors in the code sequence and when they all in the right position.
 <br>
 - You lose the game if you use all attempts without guessing the computer code sequence.
-<h4>Choose Diff </h4>
+
 	</p>
-	<select id="colorSelect">
+
+
+
+	
+<button onclick="selectRandomColors()" type="button" name="button">-       Play          -</button>
+<h4>Choose</h4>
+<select id="colorSelect">
 
 		<option value= "3" >3 Spaces</option>
 		<option value= "4" >4 Spaces</option>
 		<option value= "5" >5 Spaces</option>
 	</select>
-</p>
-<!-- table -->
-<div style="overflow-x:auto;">
-  <table> </table>
-</div>
+
+
+
+
 <hr>
-<form class="" id= "slect10" action="index.html" method="post">
 
 
- <div >
-	 <select id="select1" >
+
+
+<div>
+	<select id="select1">
  <option class="yellow" value="1"> yellow</option>
  <option class="green" value="2"> green </option>
  <option class="blue" value="3"> blue</option>
@@ -54,7 +60,7 @@
  <option class="purple" value="5"> purple</option>
  <option class="orange" value="6"> orange </option>
    </select>
-	 <select id="select2" >
+	<select id="select2">
 	<option class="yellow" value="1"> yellow</option>
 	<option class="green" value="2"> green </option>
 	<option class="blue" value="3"> blue</option>
@@ -62,7 +68,7 @@
 	<option class="purple" value="5"> purple</option>
 	<option class="orange" value="6"> orange </option>
 	 </select>
-	 <select id="select3" >
+	<select id="select3">
  <option class="yellow" value="1"> yellow</option>
  <option class="green" value="2"> green </option>
  <option class="blue" value="3"> blue</option>
@@ -70,11 +76,11 @@
  <option class="purple" value="5"> purple</option>
  <option class="orange" value="6"> orange </option>
    </select>
-<button type="button" id ="com" onclick="startGame()" name="button">CHECK </button>
- </div>
-</form>
+	<button type="button" id="com" onclick="userNum()" name="button">CHECK </button>
+</div>
 
 
-		<script type="text/javascript" src="masterm.js"></script>
-	</body>
+
+<script type="text/javascript" src="masterm.js"></script>
+</body>
 </html>
