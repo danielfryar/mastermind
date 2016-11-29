@@ -7,6 +7,27 @@
   margin-left: 10px;
 }
 
+#selectUser0{
+  visibility: hidden;
+}
+
+#selectUser1{
+  visibility: hidden;
+}
+
+#selectUser2{
+  visibility: hidden;
+}
+
+#selectUser3{
+  visibility: hidden;
+}
+
+#selectUser4{
+  visibility: hidden;
+}
+
+
 h4 {
   margin: 2px;
 }

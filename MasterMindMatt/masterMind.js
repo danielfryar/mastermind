@@ -1,31 +1,31 @@
 $(document).ready(function(){
 var colors = ["yellow", 'green','blue','red','purple','orange'];
-var difficulty;
+var difficultChoice;
 var gameBoard; /*= document.getElementById("gameBoard");*/
 var nextRow;/* = gameBoard.insertRow();*/
 var nextCell;/* = nextRow.insertCell();*/
 var answers = [];
 var guesses = [];
+var guessNumber = [];
 var answerKey;
 var compChoice;
 
-
-for (var q = 0; q < colors.length; q++){
-}
-
+function numberOfGuesses(){
+  for (var i = 0; i < difficultChoice; i++){
+  document.getElementById('selectUser'+ i).style.visibility = "visible";
+}}
 
 function codeBreaker(guesses, answers){
   answerCode = [];
   for (var i = 0; i < guesses.length; i++){
     for (var j = 0; j < answers.length; j++){
       if (guesses[i] == answers[j]){
-        if (i === j) answerCode +=('black');
-        else answerCode +='white';
+        if (i === j) answerCode.push('black');
+        else answerCode.push('white');
       }
-    }
+    }console.log(answerCode);
   }
   answerKey = answerCode;
-  console.log(answerKey);
 }
 
 
@@ -34,7 +34,7 @@ function getRandomNumber(){
 }
 
 function colorSelector(){
-  for (var i = 0; i < difficulty; i++){
+  for (var i = 0; i < difficultChoice; i++){
     do{
       var answer = getRandomNumber();
     }while (answer == undefined || answer > 5);
@@ -44,23 +44,20 @@ function colorSelector(){
 }
 
 function startGame(){
-  difficulty = Number.parseInt(document.getElementById('difficulty').value);
-  document.getElementById('guessButton').disabled = false;
+  difficultChoice = Number.parseInt(document.getElementById('difficulty').value);
+  numberOfGuesses();
 }
-
-$('#guessButton').click(function(e){
-  e.preventDefault;
-  var guess = document.getElementById('selectUser1').value;
-  guesses.push(guess);
-  codeBreaker(guesses, answers);
-  console.log(guesses);
-
-});
 
 $("#startGame").click(function(){
   startGame();
   colorSelector();
+  document.getElementById('guessButton').disabled = false;
   document.getElementById('startGame').disabled = true;
   console.log(answers);
-  });
+});
+
+$('#guessButton').click(function(e){
+  codeBreaker(guesses, answers);
+});
+
 });
