@@ -6,7 +6,7 @@ $(document).ready(function() {
     var nextCell; /* = nextRow.insertCell();*/
     var answers = [];
     var guesses = [];
-    var guessNumber = [];
+    // var guessNumber = [];
     var answerKey;
     var compChoice;
 
@@ -17,7 +17,7 @@ $(document).ready(function() {
     }
 
     function codeBreaker(guesses, answers) {
-        answerCode = [];
+        var answerCode = [];
         for (var i = 0; i < guesses.length; i++) {
             for (var j = 0; j < answers.length; j++) {
                 if (guesses[i] == answers[j]) {
@@ -27,38 +27,40 @@ $(document).ready(function() {
             }
             console.log(answerCode);
         }
-        answerKey = answerCode;
-    }
-
-
-    function getRandomNumber() {
-        return Math.floor(Math.random() * 10);
+        return answerKey = answerCode;
     }
 
     function colorSelector() {
         for (var i = 0; i < difficultChoice; i++) {
-            do {
-                var answer = getRandomNumber();
-            } while (answer == undefined || answer > 5);
+            var answer = Math.floor(Math.random() * colors.length);
             compChoice = colors[answer];
             answers.push(compChoice);
         }
     }
 
+    function conpileGuessesArray() {
+      var roundOfGuess = [];
+        for (var i = 0; i < difficultChoice; i++) {
+            roundOfGuess.push(document.getElementById('selectUser' + i).value);
+        }
+      guesses = roundOfGuess;
+    }
+
     function startGame() {
         difficultChoice = Number.parseInt(document.getElementById('difficulty').value);
         numberOfGuesses();
+        colorSelector();
     }
 
     $("#startGame").click(function() {
         startGame();
-        colorSelector();
         document.getElementById('guessButton').disabled = false;
         document.getElementById('startGame').disabled = true;
         console.log(answers);
     });
 
     $('#guessButton').click(function(e) {
+        conpileGuessesArray();
         codeBreaker(guesses, answers);
     });
 
