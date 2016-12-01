@@ -21,13 +21,12 @@ $(document).ready(function() {
         for (var i = 0; i < guesses.length; i++) {
             for (var j = 0; j < answers.length; j++) {
                 if (guesses[i] == answers[j]) {
-                    if (i === j) answerCode.push('black');
-                    else answerCode.push('white');
+                    if (i === j) {answerCode.push('black');}
+                    else {answerCode.push('white');}
                 }
             }
-            console.log(answerCode);
         }
-        return answerKey = answerCode;
+      answerKey = answerCode;
     }
 
     function colorSelector() {
@@ -38,12 +37,12 @@ $(document).ready(function() {
         }
     }
 
-    function conpileGuessesArray() {
+    function compileGuessesArray() {
       var roundOfGuess = [];
         for (var i = 0; i < difficultChoice; i++) {
             roundOfGuess.push(document.getElementById('selectUser' + i).value);
         }
-      guesses = roundOfGuess;
+       return guesses = roundOfGuess;
     }
 
     function startGame() {
@@ -60,8 +59,11 @@ $(document).ready(function() {
     });
 
     $('#guessButton').click(function(e) {
-        conpileGuessesArray();
+        compileGuessesArray();
         codeBreaker(guesses, answers);
-    });
+        console.log(answerKey);
+        if (answerKey === []){
 
+        }
+    });
 });
